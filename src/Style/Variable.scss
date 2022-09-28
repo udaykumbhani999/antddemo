@@ -1,0 +1,19 @@
+
+
+
+$white : #ffffff;
+$dark-pink : #e8e4e4;
+$pink : #ff6780;
+$hover : #1890ff;
+$shadow: #aaaaaa;
+$ft-bg :#faf2e6;
+
+
+$breakpoints:( 'xsm':480px, 'sm': 576px, 'md': 768px,'xmd': 992px, 'lg': 1024px, 'xl': 1199px, 'xxl': 1439px);
+    @mixin xsm{@media (max-width: map-get($breakpoints, 'xsm')) {@content;}}
+    @mixin sm{@media (max-width: map-get($breakpoints, 'sm')) {@content;}}
+    @mixin md {@media (max-width: map-get($breakpoints, 'md')) {@content;}}
+    @mixin xmd {@media (max-width: map-get($breakpoints, 'xmd')) {@content;}}
+    @mixin lg {@media (max-width: map-get($breakpoints, 'lg')) {@content;}}
+    @mixin xl {@media (max-width: map-get($breakpoints, 'xl')) {@content;}}
+    @mixin xxl {@media (max-width: map-get($breakpoints, 'xxl')) {@content;}}
