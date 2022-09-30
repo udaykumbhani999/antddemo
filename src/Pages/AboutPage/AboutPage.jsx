@@ -1,6 +1,7 @@
 import React from 'react'
 import "../../Pages/AboutPage/AboutPage.scss";
 
+
 import {
     AppstoreOutlined,
     BarChartOutlined,
