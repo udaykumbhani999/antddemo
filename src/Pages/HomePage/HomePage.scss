@@ -1,0 +1,125 @@
+@import '../../Style/Style.scss';
+
+.Layout{
+    .header{
+        padding: 0;
+        background-color: $white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        .header-row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            .header-col{
+                width: 25%;
+                .logo-part{
+                    color: $pink;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                }
+            }
+            .header-menu{
+                width: 50%;
+            }
+            .header-col{
+                .profile{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    span{
+                        transition: all 0.4s;
+                        &:hover{
+                            background: $hover;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .Layout-left{
+        width: 100%;
+        height: 100vh;
+        .siderPart{
+            position: fixed;
+            top: 64px;
+            height: 100vh;
+        }
+        .right-side{
+            width: 100%;
+            margin-left: 200px;
+            height: 100vh;
+            padding-top: 64px;
+            
+            .Content{
+                .content-row{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 15px;
+                    width: 100%;
+                    @include md{
+                        flex-direction: column;
+                    }
+                    .content-box{
+                        width: 33%;
+                        padding: 10px;
+                        min-height: 150px;
+                        margin: 10px 0px;
+                        box-shadow: 10px 10px 5px $shadow;
+                        background: $dark-pink;
+                        @include md{
+                            width: 100%;
+                            margin: 5px 0px;
+                        }
+                    }
+                }
+            }
+            .footer{
+                background-color: $ft-bg;
+                padding: 10px 0px;
+                .ft-row{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    @include md{
+                        flex-direction: column;
+                        gap: 20px;
+                    }
+                    .ft-col{
+                        .para{
+                            font-size: 18px;
+                            line-height: 28px;
+                            @include md{
+                                text-align: center;
+                                font-size: 14px;
+                                line-height: 22px;
+                            }
+                        }
+                    }
+                    .icon-list{
+                        .avtar{
+                            padding: 0px 5px;
+                        }
+                    }
+                }
+                }
+        }
+      
+    }
+    
+}
+.ant-menu-title-content{
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: capitalize;
+    @include md{
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+

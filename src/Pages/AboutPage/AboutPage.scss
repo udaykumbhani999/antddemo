@@ -1,0 +1,72 @@
+@import '../../Style/Style.scss';
+
+
+.about{
+    .layouts{
+        .siderPart{
+            overflow: auto;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            .logo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 32px;
+                margin: 16px;
+                background: rgba(255, 255, 255, 0.2);
+                @include sm{
+                    height: 20px;
+                    margin: 15px;
+                }
+                a{
+                    text-transform: uppercase;
+                    color: $white;
+                    font-size: 16px;
+                    line-height: 22px;
+                    @include sm{
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            .ant-menu-title-content{
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+        .site-layout{
+            margin-left: 200px;
+            .site-layout-background{
+                padding: 0px;
+                text-align: center;
+            }
+            .site-layout-content{
+                margin: 24px 16px 0px;
+                overflow: initial;
+                .site-layout-background{
+                    padding: 24px;
+                    text-align: center;
+                    p{
+                        font-family: sans-serif;
+                        font-size: 16px;
+                        line-height: 22px;
+                        @include sm{
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+            .site-layout-footer{
+                text-align: center;
+            }
+        }
+    }
+}
+
+  .site-layout .site-layout-background {
+    background: #fff;
+  }
