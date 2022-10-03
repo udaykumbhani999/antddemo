@@ -1,4 +1,8 @@
-
+$Mont_reguler: 'Montserrat_reguler';
+$Mont_Medium: 'Montserrat_Medium';
+$Mont_SemiBold: 'Montserrat_SemiBold';
+$Mont_Bold: 'Montserrat_Bold';
+$Mont_ExtraBold: 'Montserrat_ExtraBold';
 
 
 $white : #ffffff;
@@ -10,7 +14,28 @@ $ft-bg :#faf2e6;
 $black: #000000;
 $grey:#d9d9d9;
 $text-hover:#fa8c15;
+$btn-bg : #13c2c2;
+$link :#038fde;
+$linepink:#eb2f96;
 
+@mixin count {
+    font-family: $Mont_Bold;
+    font-size: 28px;
+    line-height: 30px;
+}
+@mixin title {
+    font-family: $Mont_Bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+@mixin sub-para {
+    font-family: $Mont_Medium;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: $shadow;
+}
 
 $breakpoints:( 'xsm':480px, 'sm': 576px, 'md': 768px,'xmd': 992px, 'lg': 1024px, 'xl': 1199px, 'xxl': 1439px);
     @mixin xsm{@media (max-width: map-get($breakpoints, 'xsm')) {@content;}}

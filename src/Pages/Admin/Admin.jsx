@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { Image } from "../../Assets/Image";
-
+import Content from "../../Component/Content/Content";
 import "../../Pages/Admin/Admin.scss";
 import {
     DownOutlined,
@@ -13,10 +13,11 @@ import {
     ContainerOutlined,
     MailOutlined,
     AppstoreOutlined,
+    CopyrightOutlined 
   } from '@ant-design/icons';
   import {  Layout, Menu,Input,Dropdown,Space } from 'antd';
 // import SubMenu from 'antd/lib/menu/SubMenu';
-  const { Header, Content, Footer, Sider } = Layout;
+  const { Header, Footer, Sider } = Layout;
 
   const menu = (
     <Menu theme='dark'
@@ -163,47 +164,8 @@ export default function Admin() {
                         </div>
                     </div>
                 </Header>
-                <Content className="site-layout-content">
-                    <div className="site-layout-background">
-                      <div className='content-wrapper'>
-                        <div className='content-main'>
-                          <div className='content-box'>
-                              <div className='content-part'>
-                                <span>$9.26</span>
-                                <p>Bitcoin Price</p>
-                              </div>
-                              <div className='content-image'>
-                                <img src={Image.Bitcoin} alt='Business_twoimg' className='Bitcoinimg'/>
-                              </div>
-                          </div>
-                        </div>
-
-                        <div className='content-main'>
-                          <div className='content-box'>
-                              <div className='content-part'>
-                                <span>$9.26</span>
-                                <p>Bitcoin Price</p>
-                              </div>
-                              <div className='content-image'>
-                                <img src={Image.Bitcoin} alt='Business_twoimg' className='Bitcoinimg'/>
-                              </div>
-                          </div>
-                        </div>
-                        <div className='content-main'>
-                          <div className='content-box'>
-                              <div className='content-part'>
-                                <span>$9.26</span>
-                                <p>Bitcoin Price</p>
-                              </div>
-                              <div className='content-image'>
-                                <img src={Image.Bitcoin} alt='Business_twoimg' className='Bitcoinimg'/>
-                              </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </Content>
-                <Footer className="site-layout-footer">Ant Design ©2018 Created by Ant UED</Footer>
+                <Content/>
+                <Footer className="site-layout-footer">Copyright Wieldy <CopyrightOutlined /> 2022 </Footer>
             </Layout>
         </Layout>
     </div>

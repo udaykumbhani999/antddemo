@@ -1,0 +1,183 @@
+@import '../../Style/Style.scss';
+
+.site-layout-content{
+    margin: 0 16px;
+    .site-layout-background{
+        padding: 24px;
+        min-height: 100px;
+        background-color: $white;
+        margin-top: 50px;
+        .content-wrapper{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: auto auto auto;
+            @include md{
+                grid-template-columns: auto auto;
+            }
+            @include sm{
+                grid-template-columns: auto;
+            }
+            .content-main{
+                box-shadow: 0 0 5px 5px rgb(0 0 0 / 3%);
+                border-radius: 5px;
+                border: none;
+                overflow: hidden;
+                .content-box{
+                    display: flex;
+                    flex-direction: column;
+                    background-color: $white;
+                    gap: 20px;
+                    
+                    .content-part{
+                        padding: 10px 0px 0px 10px;
+                        span{
+                            font-family: $Mont_Bold;
+                            font-size: 20px;
+                            line-height: 30px;
+                        }
+                        p{
+                            @include sub-para;
+                            color: $shadow;
+                        }
+                    }
+                    .content-image{
+                        width: 100%;
+                        height: 140px;
+                        overflow: hidden;
+
+                        .Bitcoinimg{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .row{
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 30px;
+            width: 100%;
+            @include xl{
+                grid-template-columns: auto;
+            }
+            .col-12{
+                width: 100%;
+                box-shadow: 0 0 5px 5px rgb(0 0 0 / 3%);
+                border-radius: 5px;
+                border: none;
+                padding: 20px;
+                .para-title{
+                    @include title;
+                    margin-bottom: 25px;
+                }
+                .portfolio-box{
+                    display: grid;
+                    grid-template-columns: auto auto ;
+                    width: 100%;
+                    gap: 15px;
+                    
+                    @include md{
+                        grid-template-columns: auto ;
+                        gap: 25px;
+                    }
+                    
+                    .portfolio-content{
+                        width: 100%;
+                        .count{
+                           @include count;
+                        }
+                        .para-sub{
+                            @include sub-para;
+                            margin-bottom: 20px;
+                        }
+                        .button{
+                            margin-bottom: 15px;
+                            button{
+                                border-radius: 5px;
+                                border: none;
+                                margin-right: 10px;
+                                display: inline-block;
+                                font-family: $Mont_Bold;
+                                &:last-child{
+                                    margin-right: 0px;
+                                }
+                                &.custom{
+                                    background-color: $btn-bg;
+                                }
+                            }
+                        }
+                        .addlink{
+                            color: $link;
+                            font-family: $Mont_SemiBold;
+                            font-size: 16px;
+                            line-height: 22px;
+                        }
+                    }
+                    .portfolio-progress{
+                        width: 100%;
+                        .portfolio-title{
+                            font-family: $Mont_SemiBold;
+                            font-size: 14px;
+                            line-height: 20px;
+                            text-transform: capitalize;
+                            margin-bottom: 15px;
+                        }
+                        .progressbar{
+                            .progress-span{
+                                font-family: $Mont_reguler;
+                                font-size: 12px;
+                                line-height: 18px;
+                            }  
+                        }
+                    }
+                }
+            }
+        }
+
+        .payment-row{
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 30px;
+            width: 100%;
+            .payment-col{
+                box-shadow: 0 0 5px 5px rgb(0 0 0 / 3%);
+                border-radius: 5px;
+                border: none;
+                overflow: hidden;
+                .box{
+                    .payments-content{
+                        .paymnet-title{
+                            @include title;
+                            margin-bottom: 20px;
+                        }
+                        .paymnet-para{
+                            font-family: $Mont_SemiBold;
+                            font-size: 14px;
+                            line-height: 20px;
+                            text-transform: capitalize;
+                            margin-bottom: 10px;
+                        }
+                        .payment-count{
+                            @include count;
+                            color: $hover;
+                        }
+                        .payment-subpara{
+                           @include sub-para;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // .ant-progress-bg:nth-last-child(1){    
+    //     background-color: red;
+    // }
+}
