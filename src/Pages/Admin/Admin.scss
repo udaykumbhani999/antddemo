@@ -133,3 +133,9 @@
         padding: 0px 10px;
        }
  }
+
+ aside.ant-layout-sider.ant-layout-sider-dark.site-layout-sider {
+    @include sm{
+        display: none;
+    }
+}
