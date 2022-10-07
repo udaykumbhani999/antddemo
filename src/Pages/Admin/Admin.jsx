@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { Image } from "../../Assets/Image";
 import Content from "../../Component/Content/Content";
+
 import "../../Pages/Admin/Admin.scss";
 import {
     DownOutlined,
@@ -13,12 +14,19 @@ import {
     ContainerOutlined,
     MailOutlined,
     AppstoreOutlined,
-    CopyrightOutlined 
+    CopyrightOutlined, 
+    CheckSquareOutlined,
+    ContactsOutlined,
+    MessageOutlined,
+    BookOutlined,
+    ShoppingCartOutlined,
+    UserOutlined  
   } from '@ant-design/icons';
-  import {  Layout, Menu,Input,Dropdown,Space } from 'antd';
+  import {  Layout, Menu,Input,Dropdown,Space,Switch } from 'antd';
 // import SubMenu from 'antd/lib/menu/SubMenu';
   const { Header, Footer, Sider } = Layout;
-
+  
+  
   const menu = (
     <Menu theme='dark'
       items={[
@@ -64,10 +72,11 @@ import {
   
   
 export default function Admin() {
+  const [theme, setTheme] = useState('dark');
+  const changeTheme = (value) => {
+    setTheme(value ? 'light' : 'dark');
+  };
     const [collapsed, setCollapsed] = useState(false);
-    // const toggleCollapsed = () => {
-    //   setCollapsed(!collapsed);
-    // };
     const items = [
       getItem('Dashboard', 'sub1', <MailOutlined />, [
         getItem('Crypto', '1'),
@@ -77,19 +86,18 @@ export default function Admin() {
       getItem('Widgets', '4', <PieChartOutlined />),
       getItem('Metrics', '5', <DesktopOutlined />),
       getItem('Layouts', '6', <ContainerOutlined />),
-      getItem('Mail App', '7', <ContainerOutlined />),
-      getItem('Todo App', '8', <ContainerOutlined />),
-      getItem('Contacts App', '9', <ContainerOutlined />),
-      getItem('Chat App', '10', <ContainerOutlined />),
-      getItem('Notes', '11', <ContainerOutlined />),
-      getItem('Algolia', '12', <ContainerOutlined />),
+      getItem('Mail App', '7', <MailOutlined />),
+      getItem('Todo App', '8', <CheckSquareOutlined />),
+      getItem('Contacts App', '9', <ContactsOutlined />),
+      getItem('Chat App', '10', <MessageOutlined />),
+      getItem('Notes', '11', <BookOutlined />),
+      getItem('Algolia', '12', <ShoppingCartOutlined />),
       getItem('FireBase CRUD', '13', <ContainerOutlined />),
-      getItem('Profile', '14', <ContainerOutlined />),
+      getItem('Profile', '14', <UserOutlined />),
       getItem('Wall App', '15', <ContainerOutlined />),
       getItem('General', 'sub2', <AppstoreOutlined />, [
         getItem('Button', '16'),
         getItem('Icon', '17'),
-        // getItem('Submenu', 'sub3', null, [getItem('Option 11', '9'), getItem('Option 12', '10')]),
       ]),
       getItem('Navigation', 'sub2', <AppstoreOutlined />, [
         getItem('Affix', '18'),
@@ -122,6 +130,7 @@ export default function Admin() {
   return (
     <div className='admin'>
         <Layout className="layout">
+        <Switch onChange={changeTheme} /> 
             <Sider className="site-layout-sider" trigger={null} collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
                 <div className="logo" mode="inline">
                 {React.createElement(collapsed ? MenuUnfoldOutlined : MenuUnfoldOutlined, {
@@ -136,7 +145,7 @@ export default function Admin() {
                     defaultSelectedKeys={['1']}
                     defaultOpenKeys={['sub1']}
                     mode="inline"
-                    theme="dark"
+                    theme={theme}
                     inlineCollapsed={collapsed}
                     items={items}
                   />
@@ -165,6 +174,7 @@ export default function Admin() {
                     </div>
                 </Header>
                 <Content/>
+                
                 <Footer className="site-layout-footer">Copyright Wieldy <CopyrightOutlined /> 2022 </Footer>
             </Layout>
         </Layout>

@@ -1,0 +1,76 @@
+@import '../../Style/Style.scss';
+
+.mail-wrapper{
+   padding: 20px 0px;
+    .mail-box{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+       
+        @include xmd{
+            grid-template-columns: auto;
+        }
+        .form-main{
+            padding: 20px;
+            box-shadow: 0 0 5px 5px rgb(0 0 0 / 3%);
+            border-radius: 5px;
+            .signin{
+                @include title;
+                font-size: 25px;
+                line-height: 38px;
+                margin: 10px 0px 25px 0px;
+                text-align: center;
+               @include sm{
+                font-size: 18px;
+                line-height: 30px;
+               }
+            }
+            .login-form{
+                .ant-form-item{
+                    margin-bottom: 15px;
+                }
+                .ant-input-affix-wrapper{
+                    background-color: #f5f5f5;
+                    border-radius: 5px;
+                }
+                .ant-input{
+                    background-color: #f5f5f5;
+                }
+                .ant-form-item-control-input-content {
+                    @include sub-para;
+                    ::placeholder{
+                        @include title;
+                    }
+                }
+                .ant-form-item-control-input-content{
+                    .ant-btn{
+                        padding: 0px 30px;
+                        @include sm{
+                            padding: 0px 15px;
+                        }
+                    }
+                    .login-form-button{
+                      display: block;
+                      text-align: center;
+                      margin: 0 auto;
+                      border-radius: 5px;
+                      @include title;
+                      @include sm{
+                        font-size: 14px;
+                        line-height: 20px;
+                      }
+                    }
+                }
+                
+            }
+        }
+        .form-main{
+            .empty-box{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+        }
+    }
+}

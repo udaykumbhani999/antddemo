@@ -113,9 +113,6 @@
     background-color: transparent;
     
 }
-// .ant-menu-dark .ant-menu-item-selected span {
-//     color: inherit;
-// }
 .ant-layout-sider.ant-layout-sider-collapsed .wieldy{
     display: none;
 }
@@ -137,5 +134,14 @@
  aside.ant-layout-sider.ant-layout-sider-dark.site-layout-sider {
     @include sm{
         display: none;
+    }  
     }
-}
+    button.ant-switch{
+        position: fixed;
+        top: 0px;
+        z-index: 6;
+        right: 0;
+        @include sm{
+            display: none;
+        }
+    }

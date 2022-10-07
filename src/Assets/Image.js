@@ -1,5 +1,4 @@
 export const Image = {
-    // wid_logo: require("../Assets/Images/wid_logo.png"),
     harri: require("../Assets/Images/harri.png"),
     Bitcoin: require("../Assets/Images/Bitcoin.jpeg"),
     logo: require("../Assets/Images/logo.png"),
@@ -7,4 +6,10 @@ export const Image = {
     slidefirst: require("../Assets/Images/slidefirst.jpeg"),
     slidesecond: require("../Assets/Images/slidesecond.jpeg"),
     slidethird: require("../Assets/Images/slidethird.jpeg"),
+    iPhone: require("../Assets/Images/iPhone.jpeg"),
+    dron: require("../Assets/Images/dron.jpeg"),
+    car: require("../Assets/Images/car.jpeg"),
+    headphone: require("../Assets/Images/headphone.jpeg"),
+    watch: require("../Assets/Images/watch.jpeg"),
+    alarm_clock: require("../Assets/Images/alarm_clock.jpeg"),
 }

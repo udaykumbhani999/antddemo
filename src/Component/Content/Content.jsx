@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 
 import "./Content.scss";
+
+import Mail from "../../Component/Mail/Mail";
 import { Image } from "../../Assets/Image";
-import { PlusCircleOutlined,SearchOutlined } from '@ant-design/icons';
-import { Button,Progress,Form,Select,Input,Carousel,Tabs } from 'antd';
+import { PlusCircleOutlined } from '@ant-design/icons';
+import { Button,Progress,Form,Select,Input,Carousel,Tabs,Card,Rate,BackTop } from 'antd';
 export default function Content() {
   const [size] = useState('false');
+  
   return (
     <div className="site-layout-content">
       <div className="site-layout-background">
@@ -25,7 +28,6 @@ export default function Content() {
               </div>
             </div>
           </div>
-
           <div className="content-main">
             <div className="content-box">
               <div className="content-part">
@@ -151,6 +153,7 @@ export default function Content() {
               </div>
           </div>
         </div>
+
         <div className='slider-tabbar'>
           <div className='carousel'>
             <Carousel autoplay>
@@ -240,7 +243,113 @@ export default function Content() {
           </div>
         </div>
         
-
+        <div className='product-card'>
+          <div className='product-wrapper'>
+            <div className='product-col'>
+              <Card cover={<img src={Image.iPhone} alt="iPhone" className="product-img"/>}>
+                <div className='card-content'>
+                  <p className='product-title'>iPhone 7, Black,500Htz</p>
+                  <span className='product-rate'>$359</span>
+                  <div>
+                  <Rate allowHalf defaultValue={2} />
+                  </div>
+                  <p className='product-content'>Bluetooth speaker, Karaoke singing, Car Stereo, instrument recording etc... •</p>
+                  <div className='product-btn'>
+                    <Button>Add To Cart</Button>
+                    <Button type="primary">Read More</Button>
+                  </div>
+                </div>
+              </Card>
+            </div>
+            <div className='product-col'>
+              <Card cover={<img src={Image.dron} alt="dron" className="product-img"/>}>
+                <div className='card-content'>
+                  <p className='product-title'>Bizinto 1 Three Pin, White</p>
+                  <span className='product-rate'>$399</span>
+                  <div>
+                  <Rate allowHalf defaultValue={2.5} />
+                  </div>
+                  <p className='product-content'>Bizinto is an indirectly manufacture of Power strip in Delhi and supplying...</p>
+                  <div className='product-btn'>
+                    <Button>Add To Cart</Button>
+                    <Button type="primary">Read More</Button>
+                  </div>
+                </div>
+              </Card>
+            </div>
+            <div className='product-col'>
+              <Card cover={<img src={Image.car} alt="car" className="product-img"/>}>
+                <div className='card-content'>
+                  <p className='product-title'>Samons Flameless, Black</p>
+                  <span className='product-rate'>$39</span>
+                  <div>
+                  <Rate allowHalf defaultValue={3} />
+                  </div>
+                  <p className='product-content'>Now light your cigarette buds with ease by using this USB Rechargeable...</p>
+                  <div className='product-btn'>
+                    <Button>Add To Cart</Button>
+                    <Button type="primary">Read More</Button>
+                  </div>
+                </div>
+              </Card>
+            </div>
+            <div className='product-col'>
+              <Card cover={<img src={Image.headphone} alt="headphone" className="product-img"/>}>
+                <div className='card-content'>
+                  <p className='product-title'>Sony MDR-ZX110, White</p>
+                  <span className='product-rate'>$15</span>
+                  <div>
+                  <Rate allowHalf defaultValue={3.5} />
+                  </div>
+                  <p className='product-content'>Experience great sound quality with weight and foldable headphones...</p>
+                  <div className='product-btn'>
+                    <Button>Add To Cart</Button>
+                    <Button type="primary">Read More</Button>
+                  </div>
+                </div>
+              </Card>
+            </div>
+            <div className='product-col'>
+              <Card cover={<img src={Image.watch} alt="watch" className="product-img"/>}>
+                <div className='card-content'>
+                  <p className='product-title'>watch, Black</p>
+                  <span className='product-rate'>$39</span>
+                  <div>
+                  <Rate allowHalf defaultValue={4} />
+                  </div>
+                  <p className='product-content'>Now light your cigarette buds with ease by using this USB Rechargeable Electronic Flameless Lighter.</p>
+                  <div className='product-btn'>
+                    <Button>Add To Cart</Button>
+                    <Button type="primary">Read More</Button>
+                  </div>
+                </div>
+              </Card>
+            </div>
+            <div className='product-col'>
+              <Card cover={<img src={Image.alarm_clock} alt="alarm_clock" className="product-img"/>}>
+                <div className='card-content'>
+                  <p className='product-title'>Alarm Clock, Gold</p>
+                  <span className='product-rate'>$699</span>
+                  <div>
+                  <Rate allowHalf defaultValue={5} />
+                  </div>
+                  <p className='product-content'>Horo is a home grown brand with utmost emphasis on quality goods</p>
+                  <div className='product-btn'>
+                    <Button>Add To Cart</Button>
+                    <Button type="primary">Read More</Button>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </div>
+        <div className='mailpart'>
+          <Mail />
+        </div>
+        
+        <BackTop>
+          <div className='up-btn'>UP</div>
+        </BackTop>
       </div>
     </div>
   );
