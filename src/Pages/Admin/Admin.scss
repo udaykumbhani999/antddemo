@@ -4,7 +4,6 @@
     .layout{
         min-height: 100vh;
         .site-layout-sider{
-           background-color: #003366;
             .logo{
                 display: flex;
                 align-items: center;
@@ -87,7 +86,6 @@
                 }
                 
             }
-           
             .site-layout-footer{
                 text-align: center;
                 background-color: $white;
@@ -111,7 +109,6 @@
 }
 .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
     background-color: transparent;
-    
 }
 .ant-layout-sider.ant-layout-sider-collapsed .wieldy{
     display: none;
